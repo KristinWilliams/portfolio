@@ -1,17 +1,12 @@
 import React from "react";
+import style from "./style.css";
+import NavBar from "./NavBar";
 
 const App = () => {
   return (
     <div className="container">
+      <NavBar />
       <div className="hero-container">
-        <nav>
-          <img src="img/laptop-icon.svg" alt="logo icon" />
-          <ul className="nav-list">
-            <li>skills</li>
-            <li>work</li>
-            <li>contract</li>
-          </ul>
-        </nav>
         <div className="name-container">
           <h1>kristin williams</h1>
           <h2>Frontend Developer</h2>
