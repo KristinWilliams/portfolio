@@ -18,7 +18,7 @@ html {
 }
 
 :root {
-  --dark-blue: #4b5ad1;
+  --dark-blue: hsl(233, 59%, 56%);
   --baby-blue: #b8c0ff;
   --beige: #fdf1fd;
   --pale-purple: #c8b6ff;
@@ -149,6 +149,21 @@ nav li {
   border-radius: 1.5rem;
 }
 
+.img-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: hsla(233, 59%, 56%, 0.5);
+  border-radius: 1.5rem 1.5rem 0 0;
+  z-index: 500;
+}
+
 .project-screenshot {
   width: 100%;
   border-radius: 1.5rem 1.5rem 0 0;
@@ -157,8 +172,52 @@ nav li {
 .project-title {
   display: flex;
   padding: 1rem;
+  position: relative;
 }
 
 .project-title h1 {
   font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
+}
+
+.github-icon,
+.link-icon {
+  background-color: var(--beige);
+  border-radius: 400rem;
+  padding: 0.6rem;
+  display: flex;
+  position: absolute;
+  top: -1rem;
+  z-index: 600;
+}
+
+.github-icon {
+  left: -4rem;
+}
+
+.link-icon {
+  right: -4rem;
+}
+
+.github-icon img,
+.link-icon img {
+  max-width: 80%;
+  align-items: center;
+  margin: auto;
+}
+
+.languages-used {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  max-width: 70%;
+  margin: 2rem auto;
+}
+
+.work-container li {
+  list-style: none;
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: clamp(1rem, 2vw + 1rem, 1.2rem);
 }

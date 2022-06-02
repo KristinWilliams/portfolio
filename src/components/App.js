@@ -11,7 +11,12 @@ const App = () => {
       <NavBar />
       <Hero />
       <Skills />
-      <Projects />
+      <div className="work-container">
+        <h1 className="work-header">work</h1>
+        <Projects />
+        <Projects />
+        <Projects />
+      </div>
       <div className="contact-container">
         <h1>contact</h1>
         <img src="img/github-icon.svg" />
