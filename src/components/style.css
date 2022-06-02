@@ -28,7 +28,7 @@ html {
 nav {
   background-color: var(--pale-blue);
   display: flex;
-  padding: 2rem;
+  padding: 2rem 4rem;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -48,4 +48,117 @@ nav li {
   font-size: clamp(1rem, 2vw + 1rem, 1.2rem);
   color: var(--dark-blue);
   text-transform: uppercase;
+}
+
+.hero-container {
+  background-color: var(--beige);
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.name-shape {
+  max-width: 80%;
+  margin: 3rem auto;
+}
+
+.name {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+
+.name h1 {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  text-transform: uppercase;
+}
+
+.name h2 {
+  font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
+  font-weight: normal;
+  text-indent: 1.5rem;
+}
+
+.hero-container .down-arrow {
+  margin-right: 6rem;
+  margin-top: -3rem;
+  padding-bottom: 3rem;
+  align-self: end;
+}
+
+.skills-container {
+  background-color: var(--pale-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 3rem;
+  color: var(--dark-blue);
+}
+
+.skills-container h1 {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  text-decoration: underline;
+}
+
+.skills-container ul {
+  background-color: var(--pale-purple);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 0 1rem 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skills-container li {
+  list-style-image: url("../list-img/star-bullets.svg");
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  font-size: clamp(1rem, 2vw + 1rem, 1.2rem);
+}
+
+.work-container {
+  background-color: var(--beige);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--dark-blue);
+}
+
+.work-header {
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 2rem;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+}
+
+.project {
+  background-color: var(--pale-purple);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 70%;
+  margin-top: 3rem;
+  border-radius: 1.5rem;
+}
+
+.project-screenshot {
+  width: 100%;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.project-title {
+  display: flex;
+  padding: 1rem;
+}
+
+.project-title h1 {
+  font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
 }
