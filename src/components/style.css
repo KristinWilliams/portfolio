@@ -23,6 +23,7 @@ html {
   --beige: #fdf1fd;
   --pale-purple: #c8b6ff;
   --pale-blue: #d8dffe;
+  --pg-header: clamp(1.8rem, 2vw + 1rem, 2rem);
 }
 
 nav {
@@ -104,7 +105,7 @@ nav li {
 }
 
 .skills-container h1 {
-  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  font-size: var(--pg-header);
   text-decoration: underline;
 }
 
@@ -136,7 +137,7 @@ nav li {
   text-transform: uppercase;
   text-decoration: underline;
   margin-top: 2rem;
-  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  font-size: var(--pg-header);
 }
 
 .project {
@@ -179,8 +180,8 @@ nav li {
   font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
 }
 
-.github-icon,
-.link-icon {
+.project-title .github-icon,
+.project-title .link-icon {
   background-color: var(--beige);
   border-radius: 400rem;
   padding: 0.6rem;
@@ -190,16 +191,16 @@ nav li {
   z-index: 600;
 }
 
-.github-icon {
+.project-title .github-icon {
   left: -4rem;
 }
 
-.link-icon {
+.project-title .link-icon {
   right: -4rem;
 }
 
-.github-icon img,
-.link-icon img {
+.project-title .github-icon img,
+.project-title .link-icon img {
   max-width: 80%;
   align-items: center;
   margin: auto;
@@ -220,4 +221,82 @@ nav li {
   padding: 0.5rem;
   border-radius: 0.5rem;
   font-size: clamp(1rem, 2vw + 1rem, 1.2rem);
+}
+
+.contact-container {
+  background-color: var(--pale-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-container h1 {
+  color: var(--dark-blue);
+  font-size: var(--pg-header);
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin: 2.5rem auto;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container .github-icon,
+.contact-container .linkedin-icon {
+  display: flex;
+  border-radius: 500rem;
+  width: 3rem;
+  margin: 1rem 0.5rem;
+}
+
+.contact-container .github-icon svg {
+  width: 2rem;
+  margin: auto;
+}
+
+.contact-container .github-icon {
+  background-color: var(--dark-blue);
+}
+
+form {
+  max-width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 0.5rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--baby-blue);
+}
+
+::placeholder {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: clamp(1rem, 2vw + 1rem, 1.2rem);
+}
+
+input[type="textarea"] {
+  height: 15rem;
+}
+
+input[type="textarea"]::placeholder {
+  position: absolute;
+}
+
+.contact-container button {
+  background-color: var(--dark-blue);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  max-width: 50%;
+  margin: 2rem auto;
+  font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
 }

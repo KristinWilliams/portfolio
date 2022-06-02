@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import Hero from "./Hero";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 const App = () => {
   return (
@@ -17,17 +18,7 @@ const App = () => {
         <Projects />
         <Projects />
       </div>
-      <div className="contact-container">
-        <h1>contact</h1>
-        <img src="img/github-icon.svg" />
-        <img src="img/link-icon.svg" />
-        <form name="contact" method="POST">
-          <input type="text" placeholder="Name"></input>
-          <input type="text" placeholder="Email"></input>
-          <input type="textarea" placeholder="Comment"></input>
-          <button type="submit">submit</button>
-        </form>
-      </div>
+      <Contact />
     </div>
   );
 };
