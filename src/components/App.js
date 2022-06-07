@@ -14,9 +14,21 @@ const App = () => {
       <Skills />
       <div className="work-container">
         <h1 className="work-header">work</h1>
-        <Projects />
-        <Projects />
-        <Projects />
+        <Projects
+          thumbnail="img/all-about-it-screenshot.png"
+          link="https://www.allaboutitpublishing.com/"
+          title="All About it"
+        />
+        <Projects
+          thumbnail="img/sneakers-ecommerce-screenshot.png"
+          link="https://sneakers-ecommerce-app.netlify.app/"
+          title="Sneakers Ecommerce"
+        />
+        <Projects
+          thumbnail="img/calculator-screenshot.png"
+          link="https://my-calcu-app.netlify.app/"
+          title="Calculator"
+        />
       </div>
       <Contact />
     </div>

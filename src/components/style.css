@@ -23,16 +23,20 @@ html {
   --beige: #fdf1fd;
   --pale-purple: #c8b6ff;
   --pale-blue: #d8dffe;
-  --pg-header: clamp(1.8rem, 2vw + 1rem, 2rem);
+  --pg-header: clamp(2.5rem, 2vw + 1rem, 3rem);
+  --container-padding: 10rem 0;
 }
 
 nav {
+  position: fixed;
+  z-index: 900;
   background-color: var(--pale-blue);
   display: flex;
   padding: 2rem 4rem;
   align-items: center;
   justify-content: center;
   width: 100%;
+  box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.25);
 }
 
 nav img {
@@ -57,6 +61,7 @@ nav li {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: var(--container-padding);
 }
 
 .name-container {
@@ -66,25 +71,27 @@ nav li {
 }
 
 .name-shape {
-  max-width: 80%;
+  width: 100%;
   margin: 3rem auto;
+  margin-top: 10rem;
 }
 
 .name {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 30%;
 }
 
 .name h1 {
-  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
   text-transform: uppercase;
+  text-indent: -2rem;
 }
 
 .name h2 {
-  font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
+  font-size: clamp(1.5rem, 2vw + 1rem, 1.8rem);
   font-weight: normal;
-  text-indent: 1.5rem;
+  text-indent: 2rem;
 }
 
 .hero-container .down-arrow {
@@ -92,6 +99,7 @@ nav li {
   margin-top: -3rem;
   padding-bottom: 3rem;
   align-self: end;
+  width: 10%;
 }
 
 .skills-container {
@@ -102,6 +110,7 @@ nav li {
   text-transform: uppercase;
   padding: 3rem;
   color: var(--dark-blue);
+  padding: var(--container-padding);
 }
 
 .skills-container h1 {
@@ -112,17 +121,18 @@ nav li {
 .skills-container ul {
   background-color: var(--pale-purple);
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 4rem;
   border-radius: 0 1rem 0 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  grid-template-columns: 1fr;
+  max-width: 70%;
 }
 
 .skills-container li {
   list-style-image: url("../list-img/star-bullets.svg");
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  font-size: clamp(1rem, 2vw + 1rem, 1.2rem);
+  font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
 }
 
 .work-container {
@@ -131,6 +141,7 @@ nav li {
   flex-direction: column;
   align-items: center;
   color: var(--dark-blue);
+  padding: 3rem;
 }
 
 .work-header {
@@ -189,19 +200,27 @@ nav li {
   position: absolute;
   top: -1rem;
   z-index: 600;
+  width: 3rem;
+  filter: drop-shadow(1px 1px 1px hsla(0, 0%, 0%, 0.5));
+}
+
+.project-title .github-icon:hover,
+.project-title .link-icon:hover {
+  cursor: pointer;
+  filter: drop-shadow(3px 3px 3px hsla(0, 0%, 0%, 0.25));
 }
 
 .project-title .github-icon {
-  left: -4rem;
+  left: -2rem;
 }
 
 .project-title .link-icon {
-  right: -4rem;
+  right: -2rem;
 }
 
 .project-title .github-icon img,
 .project-title .link-icon img {
-  max-width: 80%;
+  max-width: 90%;
   align-items: center;
   margin: auto;
 }
@@ -228,6 +247,7 @@ nav li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 4rem;
 }
 
 .contact-container h1 {
@@ -241,14 +261,25 @@ nav li {
 .icons {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .contact-container .github-icon,
 .contact-container .linkedin-icon {
   display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 500rem;
-  width: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   margin: 1rem 0.5rem;
+  filter: drop-shadow(1px 1px 1px hsla(0, 0%, 0%, 0.5));
+}
+
+.contact-container .github-icon:hover,
+.contact-container .linkedin-icon:hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 2px hsla(0, 0%, 0%, 0.25));
 }
 
 .contact-container .github-icon svg {
@@ -260,11 +291,17 @@ nav li {
   background-color: var(--dark-blue);
 }
 
+.contact-container .linkedin-icon img {
+  width: 4rem;
+  height: 3.5rem;
+}
+
 form {
   max-width: 80%;
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 input {
@@ -299,4 +336,10 @@ input[type="textarea"]::placeholder {
   max-width: 50%;
   margin: 2rem auto;
   font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
+  filter: drop-shadow(1px 1px 1px hsla(0, 0%, 0%, 0.5));
+}
+
+.contact-container button:hover {
+  cursor: pointer;
+  filter: drop-shadow(3px 3px 3px hsla(0, 0%, 0%, 0.25));
 }
