@@ -1,0 +1,40 @@
+.container {
+  background-color: var(--beige);
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.name-container {
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.name-shape {
+  width: 100%;
+  margin: 3rem auto;
+  margin-top: 10rem;
+}
+
+.name {
+  position: absolute;
+  top: 55%;
+  left: 30%;
+}
+
+.name h1 {
+  font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
+  text-transform: uppercase;
+  text-indent: -2rem;
+}
+
+.name h2 {
+  font-size: clamp(1.5rem, 2vw + 1rem, 1.8rem);
+  font-weight: normal;
+  text-indent: 2rem;
+}

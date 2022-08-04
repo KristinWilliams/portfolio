@@ -1,0 +1,99 @@
+.container {
+  background-color: var(--pale-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  height: 100vh;
+}
+
+.container h1 {
+  color: var(--dark-blue);
+  font-size: var(--pg-header);
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin: 2.5rem auto;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .github-icon,
+.container .linkedin-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 1rem 0.5rem;
+  filter: drop-shadow(1px 1px 1px hsla(0, 0%, 0%, 0.5));
+}
+
+.container .github-icon:hover,
+.container .linkedin-icon:hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 2px hsla(0, 0%, 0%, 0.25));
+}
+
+.container .github-icon svg {
+  width: 2rem;
+  margin: auto;
+}
+
+.container .github-icon {
+  background-color: var(--dark-blue);
+}
+
+.container .linkedin-icon img {
+  width: 4rem;
+  height: 3.5rem;
+}
+
+form {
+  max-width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin: 0.5rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--baby-blue);
+}
+
+::placeholder {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: clamp(1rem, 2vw + 1rem, 1.2rem);
+}
+
+input[type="textarea"] {
+  padding-bottom: 10rem;
+}
+
+.container button {
+  background-color: var(--dark-blue);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  max-width: 50%;
+  margin: 2rem auto;
+  font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
+  filter: drop-shadow(1px 1px 1px hsla(0, 0%, 0%, 0.5));
+}
+
+.container button:hover {
+  cursor: pointer;
+  filter: drop-shadow(3px 3px 3px hsla(0, 0%, 0%, 0.25));
+}

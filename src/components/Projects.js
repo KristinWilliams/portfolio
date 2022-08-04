@@ -1,35 +1,28 @@
 import React from "react";
+import ProjectsModule from "./css/Projects.module.css";
+import NavBar from "./NavBar";
 
-const Projects = ({ thumbnail, link, title }) => {
+const Projects = ({ title, img, github, siteLink }) => {
   return (
-    <>
-      <div className="project">
-        <div className="img-container">
-          <div className="overlay"></div>
-          <img src={thumbnail} className="project-screenshot" />
-        </div>
-        <div className="project-title">
-          <a href="https://github.com/KristinWilliams">
-            <div className="github-icon">
-              <img src="img/github-icon.svg" />
-            </div>
-          </a>
-          <h1>{title}</h1>
-          <a href={link}>
-            <div className="link-icon">
-              <img src="img/link-icon.svg" />
-            </div>
-          </a>
-        </div>
+    <div className={ProjectsModule.project}>
+      <div className={ProjectsModule["img-container"]}>
+        <div className={ProjectsModule.overlay}></div>
+        <img src={img} className={ProjectsModule.screenshot} />
       </div>
-      <ul className="languages-used">
-        <li>React</li>
-        <li>React</li>
-        <li>React</li>
-        <li>React</li>
-        <li>React</li>
-      </ul>
-    </>
+      <div className={ProjectsModule["project-title"]}>
+        <a href={github}>
+          <div className={ProjectsModule["github-icon"]}>
+            <img src="img/github-icon.svg" />
+          </div>
+        </a>
+        <h1>{title}</h1>
+        <a href={siteLink}>
+          <div className={ProjectsModule["link-icon"]}>
+            <img src="img/link-icon.svg" />
+          </div>
+        </a>
+      </div>
+    </div>
   );
 };
 

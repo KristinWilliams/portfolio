@@ -1,37 +1,25 @@
 import React from "react";
 import style from "./style.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Hero from "./Hero";
 import Skills from "./Skills";
-import Projects from "./Projects";
+import Work from "./Work";
 import Contact from "./Contact";
+import { UseThemeProvider } from "./Context";
 
 const App = () => {
   return (
-    <div className="container">
-      <NavBar />
-      <Hero />
-      <Skills />
-      <div className="work-container">
-        <h1 className="work-header">work</h1>
-        <Projects
-          thumbnail="img/all-about-it-screenshot.png"
-          link="https://www.allaboutitpublishing.com/"
-          title="All About it"
-        />
-        <Projects
-          thumbnail="img/sneakers-ecommerce-screenshot.png"
-          link="https://sneakers-ecommerce-app.netlify.app/"
-          title="Sneakers Ecommerce"
-        />
-        <Projects
-          thumbnail="img/calculator-screenshot.png"
-          link="https://my-calcu-app.netlify.app/"
-          title="Calculator"
-        />
-      </div>
-      <Contact />
-    </div>
+    <Router>
+      <UseThemeProvider>
+        <Routes>
+          <Route path="/" element={<Hero />}></Route>
+          <Route path="/skills" element={<Skills />}></Route>
+          <Route path="/work" element={<Work />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
+      </UseThemeProvider>
+    </Router>
   );
 };
 

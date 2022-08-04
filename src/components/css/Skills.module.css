@@ -1,0 +1,32 @@
+.container {
+  background-color: var(--pale-blue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+}
+
+.container h1 {
+  font-size: var(--pg-header);
+  text-decoration: underline;
+}
+
+.skills-list {
+  background-color: var(--pale-purple);
+  margin-top: 2rem;
+  padding: 4rem;
+  border-radius: 0 1rem 0 1rem;
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  grid-template-columns: 1fr;
+  max-width: 70%;
+}
+
+.skills-list li {
+  list-style-image: url("../list-img/star-bullets.svg");
+  font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
+}

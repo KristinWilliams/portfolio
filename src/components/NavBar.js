@@ -1,13 +1,36 @@
 import React from "react";
+import NavModule from "./css/Navbar.module.css";
+import { NavLink } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ background }) => {
   return (
-    <nav>
+    <nav style={{ background }}>
       <img src="img/laptop-icon.svg" alt="logo icon" />
-      <ul className="nav-list">
-        <li>skills</li>
-        <li>work</li>
-        <li>contract</li>
+      <ul className={NavModule["nav-list"]}>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+        >
+          <li>Home</li>
+        </NavLink>
+        <NavLink
+          to="/skills"
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+        >
+          <li>skills</li>
+        </NavLink>
+        <NavLink
+          to="/work"
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+        >
+          <li>work</li>
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+        >
+          <li>contact</li>
+        </NavLink>
       </ul>
     </nav>
   );

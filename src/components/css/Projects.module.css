@@ -1,0 +1,109 @@
+.container {
+  background-color: var(--beige);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--dark-blue);
+  justify-content: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+.work-header {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: var(--pg-header);
+  padding-top: 15rem;
+}
+
+.project {
+  background-color: var(--pale-purple);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 70%;
+  margin-top: 3rem;
+  border-radius: 1.5rem;
+}
+
+.img-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: hsla(233, 59%, 56%, 0.5);
+  border-radius: 1.5rem 1.5rem 0 0;
+  z-index: 500;
+}
+
+.screenshot {
+  width: 100%;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.project-title {
+  display: flex;
+  padding: 1rem;
+  position: relative;
+}
+
+.project-title h1 {
+  text-decoration: none;
+  font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
+}
+
+.project-title .github-icon,
+.project-title .link-icon {
+  background-color: var(--beige);
+  border-radius: 400rem;
+  padding: 0.6rem;
+  display: flex;
+  position: absolute;
+  top: -1rem;
+  z-index: 600;
+  width: 3rem;
+  filter: drop-shadow(1px 1px 1px hsla(0, 0%, 0%, 0.5));
+}
+
+.project-title .github-icon:hover,
+.project-title .link-icon:hover {
+  cursor: pointer;
+  filter: drop-shadow(3px 3px 3px hsla(0, 0%, 0%, 0.25));
+}
+
+.project-title .github-icon {
+  left: -2rem;
+}
+
+.project-title .link-icon {
+  right: -2rem;
+}
+
+.project-title .github-icon img,
+.project-title .link-icon img {
+  max-width: 90%;
+  align-items: center;
+  margin: auto;
+}
+
+.languages-used {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  max-width: 70%;
+  margin: 2rem auto;
+}
+
+.container li {
+  list-style: none;
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: clamp(1rem, 2vw + 1rem, 1.2rem);
+}
