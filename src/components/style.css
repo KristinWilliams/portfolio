@@ -28,7 +28,8 @@ html {
 }
 
 body {
-  background-color: var(--beige);
+  display: flex;
+  flex-direction: column;
 }
 
 .active {
@@ -38,4 +39,13 @@ body {
 
 .inactive {
   text-decoration: none;
+}
+
+.footer {
+  width: 100%;
+  /* position: sticky; */
+  background-color: var(--baby-blue);
+  height: 6rem;
+  /* bottom: 0; */
+  /* margin-top: auto; */
 }

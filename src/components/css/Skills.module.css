@@ -1,32 +1,105 @@
 .container {
   background-color: var(--pale-blue);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
+
   color: var(--dark-blue);
 }
+.content {
+  margin-bottom: 5rem;
+  align-items: center;
+}
 
-.container h1 {
+.header {
   font-size: var(--pg-header);
+  text-transform: uppercase;
   text-decoration: underline;
+  align-self: center;
+}
+
+p {
+  background-color: white;
+  max-width: 80%;
+  padding: 3rem;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+  border-radius: 3rem;
+  margin: 3rem auto;
+}
+
+.skills {
+  background-color: var(--pale-purple);
+  border-radius: 0 1rem 0 1rem;
+  padding: 4rem;
+  max-width: 80%;
+  margin: auto;
+}
+
+.skills h1 {
+  font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
 .skills-list {
-  background-color: var(--pale-purple);
-  margin-top: 2rem;
-  padding: 4rem;
-  border-radius: 0 1rem 0 1rem;
   display: grid;
-  column-gap: 2rem;
+  column-gap: 3.5rem;
   row-gap: 2rem;
-  grid-template-columns: 1fr;
-  max-width: 70%;
+  grid-template-columns: auto 1fr;
+  white-space: pre-line;
+  margin: -25px 0 0;
 }
 
 .skills-list li {
   list-style-image: url("../list-img/star-bullets.svg");
-  font-size: clamp(1.2rem, 2vw + 1rem, 1.5rem);
+  font-size: clamp(1rem, 2vw + 1rem, 2rem);
+  column-width: 20rem;
+  column-gap: 4rem;
+}
+
+@media (min-width: 484px) {
+  .content {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 754px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4rem auto;
+    max-width: 80%;
+  }
+
+  .skills {
+    padding: 4rem;
+  }
+  .skills {
+    margin-left: 4rem;
+  }
+  p {
+    margin-right: 4rem;
+  }
+}
+
+@media (min-width: 1028px) {
+  p,
+  .skills {
+    max-width: 55%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .content {
+    max-width: 60%;
+  }
+  p {
+    padding: 5rem;
+  }
 }

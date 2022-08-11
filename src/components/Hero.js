@@ -1,22 +1,25 @@
 import React from "react";
 import HeroModule from "./css/Hero.module.css";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 const Hero = () => {
   return (
-    <>
-      <NavBar background="#D8DFFE" />
-      <div className={HeroModule.container}>
-        <div className={HeroModule["name-container"]}>
-          <img src="img/name-shape.svg" className={HeroModule["name-shape"]} />
-
-          <div className={HeroModule.name}>
-            <h1>kristin williams</h1>
-            <h2>Frontend Developer</h2>
-          </div>
-        </div>
+    <div className={HeroModule.container}>
+      <div>
+        <NavBar background="#D8DFFE" />
       </div>
-    </>
+      <main className={HeroModule.content}>
+        <div className={HeroModule["name-container"]}>
+          <h1>kristin williams</h1>
+          <h3>Frontend Developer</h3>
+        </div>
+        <div className={HeroModule["cat-img-container"]}>
+          <img src="img/robot.svg" />
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 };
 
