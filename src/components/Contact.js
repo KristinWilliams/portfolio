@@ -1,12 +1,15 @@
 import React from "react";
 import ContactModule from "./css/Contact.module.css";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 const Contact = () => {
   return (
-    <>
-      <NavBar background="#FDF1FD" />
-      <div className={ContactModule.container}>
+    <div className={ContactModule.container}>
+      <div>
+        <NavBar background="#FDF1FD" />
+      </div>
+      <main className={ContactModule.content}>
         <h1>contact</h1>
         <div className={ContactModule.icons}>
           <a href="https://github.com/KristinWilliams">
@@ -37,8 +40,9 @@ const Contact = () => {
           <input type="textarea" placeholder="Comment"></input>
           <button type="submit">submit</button>
         </form>
-      </div>
-    </>
+      </main>
+      <Footer />
+    </div>
   );
 };
 
