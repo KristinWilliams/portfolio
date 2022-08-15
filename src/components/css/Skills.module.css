@@ -23,9 +23,8 @@
   margin-top: 3rem;
 }
 
-p {
+.bio {
   background-color: white;
-
   padding: 3rem;
   font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
   border-radius: 3rem;
@@ -52,8 +51,6 @@ p {
 }
 
 .skills-list {
-  /* white-space: pre-line;
-  margin: -25px 0 0; */
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
@@ -89,30 +86,27 @@ p {
   .skills {
     margin-left: 4rem;
   }
-  p {
+  .bio {
     margin-right: 4rem;
   }
-}
-
-@media (min-width: 1028px) {
-  /* .content {
-    max-width: 65%;
-  } */
-  /* p,
-  .skills {
-    max-width: 55%;
-  } */
 }
 
 @media (min-width: 1400px) {
   .content {
     max-width: 50%;
   }
-  p {
+  .bio {
     padding: 5rem;
   }
   .skills-list li {
     font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .container {
+    background-color: var(--beige);
+    padding: 10rem;
   }
 }
 

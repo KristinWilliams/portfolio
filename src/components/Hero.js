@@ -8,7 +8,7 @@ import MobileModal from "./MobileModal";
 
 const Hero = () => {
   return (
-    <div className={HeroModule.container}>
+    <div className={HeroModule.container} id="hero">
       <div>
         <NavBar background="#D8DFFE" />
       </div>
@@ -21,7 +21,9 @@ const Hero = () => {
           <img src="img/robot.svg" />
         </div>
       </main>
+      <img src="img/border.svg" className={HeroModule.border} />
       <Skills />
+      <img src="img/border.svg" className={HeroModule.border} />
       <Contact />
       <Footer />
     </div>

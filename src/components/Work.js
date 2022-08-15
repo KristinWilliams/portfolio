@@ -8,7 +8,15 @@ const Work = () => {
   const allAboutIt = ["React", "Apis", "CSS", "Strapi"];
   return (
     <div className={ProjectsModule.container}>
-      <NavBar background="#D8DFFE" />
+      <NavBar
+        background="#D8DFFE"
+        display="none"
+        justifyContent="center"
+        marginRight="2rem"
+        marginLeft="2rem"
+        width="100%"
+        minWidth="5%"
+      />
       <main className={ProjectsModule.content}>
         <h1 className={ProjectsModule["work-header"]}>Work</h1>
         <Projects

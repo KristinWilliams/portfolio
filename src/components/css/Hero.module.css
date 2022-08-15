@@ -44,6 +44,10 @@
   text-indent: -6rem;
 }
 
+.border {
+  display: none;
+}
+
 @media (min-width: 528px) {
   .name-container {
     height: 40rem;
@@ -88,5 +92,13 @@
   .cat-img-container {
     width: 30rem;
     height: 30rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .border {
+    display: block;
+    width: 15%;
+    margin: auto;
   }
 }

@@ -3,10 +3,17 @@ import NavModule from "./css/Navbar.module.css";
 import { NavLink } from "react-router-dom";
 import MobileModal from "./MobileModal";
 
-const NavBar = ({ background }) => {
+const NavBar = ({
+  display,
+  justifyContent,
+  marginRight,
+  width,
+  minWidth,
+  marginLeft,
+}) => {
   const [openModal, setOpenModal] = useState(false);
   return (
-    <div className={NavModule.container} style={{ background }}>
+    <div className={NavModule.container}>
       {openModal ? <MobileModal closeModal={setOpenModal} /> : null}
       <div className={NavModule["mobile-menu-container"]}>
         <img
@@ -15,36 +22,46 @@ const NavBar = ({ background }) => {
           onClick={() => setOpenModal(true)}
         />
       </div>
-      <nav>
+      <nav style={{ width }}>
         <div>
           <img src="img/laptop-icon.svg" alt="logo icon" />
         </div>
-        <ul className={NavModule["nav-list"]}>
+        <ul className={NavModule["nav-list"]} style={{ justifyContent }}>
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active" : "inactive")}
           >
-            <li>Home</li>
+            <li style={{ marginRight, marginLeft }}>Home</li>
           </NavLink>
-          <NavLink
-            to="/skills"
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
+
+          <li
+            onClick={() => {
+              const scroll = document.querySelector("#about");
+              scroll.scrollIntoView({ behavior: "smooth", block: "center" });
+            }}
+            style={{ display }}
           >
-            <li>about</li>
-          </NavLink>
+            about
+          </li>
+
           <NavLink
             to="/work"
             className={({ isActive }) => (isActive ? "active" : "inactive")}
           >
             <li>work</li>
           </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
+
+          <li
+            onClick={() => {
+              const scroll = document.querySelector("#contact");
+              scroll.scrollIntoView({ behavior: "smooth", block: "center" });
+            }}
+            style={{ display }}
           >
-            <li>contact</li>
-          </NavLink>
+            contact
+          </li>
         </ul>
+        <div style={{ minWidth }}></div>
       </nav>
     </div>
   );

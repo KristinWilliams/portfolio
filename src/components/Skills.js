@@ -5,10 +5,10 @@ import Footer from "./Footer";
 
 const Skills = () => {
   return (
-    <div className={SkillsModule.container}>
+    <div className={SkillsModule.container} id="about">
       <h1 className={SkillsModule.header}>About</h1>
       <main className={SkillsModule.content}>
-        <p>
+        <p className={SkillsModule.bio}>
           Hi, my name is Kristin. I’m a Frontend Developer who is very
           passionate about tech and design.
         </p>

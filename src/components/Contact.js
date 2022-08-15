@@ -5,10 +5,7 @@ import Footer from "./Footer";
 
 const Contact = () => {
   return (
-    <div className={ContactModule.container}>
-      {/* <div>
-        <NavBar background="#FDF1FD" />
-      </div> */}
+    <div className={ContactModule.container} id="contact">
       <main className={ContactModule.content}>
         <h1>contact</h1>
         <div className={ContactModule.icons}>
