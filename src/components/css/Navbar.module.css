@@ -59,6 +59,12 @@ nav {
   z-index: 300;
 }
 
+@media (min-width: 420px) {
+  .modal {
+    min-width: 50%;
+  }
+}
+
 @media (min-width: 536px) {
   .mobile-menu-container {
     display: none;

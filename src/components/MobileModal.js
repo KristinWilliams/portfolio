@@ -5,7 +5,10 @@ import { NavLink } from "react-router-dom";
 const MobileModal = ({ closeModal }) => {
   return (
     <>
-      <div className={NavModule.overlay}></div>
+      <div
+        className={NavModule.overlay}
+        onClick={() => closeModal(false)}
+      ></div>
       <div className={NavModule.modal}>
         <img
           className={NavModule["menu-icon"]}
