@@ -69,16 +69,21 @@ nav {
   .mobile-menu-container {
     display: none;
   }
+  .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.25);
+  }
 
   nav {
     position: static;
     top: 0;
     display: flex;
+    justify-content: space-between;
+    margin: auto;
     padding: 2rem 4rem;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.25);
+    width: 80%;
   }
 
   nav img {
@@ -88,11 +93,13 @@ nav {
   nav ul {
     display: flex;
     list-style: none;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
   }
 
   nav li {
-    margin-left: 2rem;
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw + 1rem, 1.4rem);
     color: var(--dark-blue);
     text-transform: uppercase;
   }
@@ -100,5 +107,32 @@ nav {
   nav li:hover {
     cursor: pointer;
     font-weight: bold;
+  }
+}
+
+@media (min-width: 962px) {
+  nav {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1322px) {
+  nav {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1400px) {
+  nav {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1600px) {
+  nav {
+    width: 40%;
+  }
+  nav li {
+    font-size: 1.6rem;
   }
 }

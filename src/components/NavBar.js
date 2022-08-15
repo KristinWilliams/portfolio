@@ -6,7 +6,7 @@ import MobileModal from "./MobileModal";
 const NavBar = ({ background }) => {
   const [openModal, setOpenModal] = useState(false);
   return (
-    <>
+    <div className={NavModule.container} style={{ background }}>
       {openModal ? <MobileModal closeModal={setOpenModal} /> : null}
       <div className={NavModule["mobile-menu-container"]}>
         <img
@@ -15,8 +15,10 @@ const NavBar = ({ background }) => {
           onClick={() => setOpenModal(true)}
         />
       </div>
-      <nav style={{ background }}>
-        <img src="img/laptop-icon.svg" alt="logo icon" />
+      <nav>
+        <div>
+          <img src="img/laptop-icon.svg" alt="logo icon" />
+        </div>
         <ul className={NavModule["nav-list"]}>
           <NavLink
             to="/"
@@ -44,7 +46,7 @@ const NavBar = ({ background }) => {
           </NavLink>
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 
