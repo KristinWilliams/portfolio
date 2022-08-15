@@ -6,19 +6,16 @@ import Hero from "./Hero";
 import Skills from "./Skills";
 import Work from "./Work";
 import Contact from "./Contact";
-import { UseThemeProvider } from "./Context";
 
 const App = () => {
   return (
     <Router>
-      <UseThemeProvider>
-        <Routes>
-          <Route path="/" element={<Hero />}></Route>
-          <Route path="/skills" element={<Skills />}></Route>
-          <Route path="/work" element={<Work />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-        </Routes>
-      </UseThemeProvider>
+      <Routes>
+        <Route path="/" element={<Hero />}></Route>
+        <Route path="/skills" element={<Skills />}></Route>
+        <Route path="/work" element={<Work />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
     </Router>
   );
 };

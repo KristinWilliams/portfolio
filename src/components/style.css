@@ -43,9 +43,6 @@ body {
 
 .footer {
   width: 100%;
-  /* position: sticky; */
-  background-color: var(--baby-blue);
+  background-color: var(--pale-blue);
   height: 6rem;
-  /* bottom: 0; */
-  /* margin-top: auto; */
 }

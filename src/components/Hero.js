@@ -2,6 +2,9 @@ import React from "react";
 import HeroModule from "./css/Hero.module.css";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import Skills from "./Skills";
+import Contact from "./Contact";
+import MobileModal from "./MobileModal";
 
 const Hero = () => {
   return (
@@ -18,6 +21,8 @@ const Hero = () => {
           <img src="img/robot.svg" />
         </div>
       </main>
+      <Skills />
+      <Contact />
       <Footer />
     </div>
   );

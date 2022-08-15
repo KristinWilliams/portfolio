@@ -1,23 +1,18 @@
 import React, { useState } from "react";
 import NavModule from "./css/Navbar.module.css";
 import { NavLink } from "react-router-dom";
-import MobileModal from "./MobileModal";
 
-const NavBar = ({ background }) => {
-  const [openModal, setOpenModal] = useState(false);
+const MobileModal = ({ closeModal }) => {
   return (
     <>
-      {openModal ? <MobileModal closeModal={setOpenModal} /> : null}
-      <div className={NavModule["mobile-menu-container"]}>
+      <div className={NavModule.overlay}></div>
+      <div className={NavModule.modal}>
         <img
-          className={NavModule["mobile-menu"]}
+          className={NavModule["menu-icon"]}
           src="img/menu.svg"
-          onClick={() => setOpenModal(true)}
+          onClick={() => closeModal(false)}
         />
-      </div>
-      <nav style={{ background }}>
-        <img src="img/laptop-icon.svg" alt="logo icon" />
-        <ul className={NavModule["nav-list"]}>
+        <ul>
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active" : "inactive")}
@@ -43,9 +38,9 @@ const NavBar = ({ background }) => {
             <li>contact</li>
           </NavLink>
         </ul>
-      </nav>
+      </div>
     </>
   );
 };
 
-export default NavBar;
+export default MobileModal;

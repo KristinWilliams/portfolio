@@ -6,9 +6,9 @@ import Footer from "./Footer";
 const Contact = () => {
   return (
     <div className={ContactModule.container}>
-      <div>
+      {/* <div>
         <NavBar background="#FDF1FD" />
-      </div>
+      </div> */}
       <main className={ContactModule.content}>
         <h1>contact</h1>
         <div className={ContactModule.icons}>
@@ -41,7 +41,7 @@ const Contact = () => {
           <button type="submit">submit</button>
         </form>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

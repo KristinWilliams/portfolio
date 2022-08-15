@@ -6,9 +6,6 @@ import Footer from "./Footer";
 const Skills = () => {
   return (
     <div className={SkillsModule.container}>
-      <div>
-        <NavBar background="#FDF1FD" />
-      </div>
       <h1 className={SkillsModule.header}>About</h1>
       <main className={SkillsModule.content}>
         <p>
@@ -16,7 +13,9 @@ const Skills = () => {
           passionate about tech and design.
         </p>
         <div className={SkillsModule.skills}>
-          <h1>Skills</h1>
+          <div>
+            <h1>Skills</h1>
+          </div>
           <ul className={SkillsModule["skills-list"]}>
             <li>HTML</li>
             <li>SCSS</li>
@@ -28,7 +27,6 @@ const Skills = () => {
           </ul>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
