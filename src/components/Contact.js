@@ -31,14 +31,18 @@ const Contact = () => {
             </div>
           </a>
         </div>
-        <form name="contact" method="POST">
-          <input type="text" placeholder="Name"></input>
-          <input type="text" placeholder="Email"></input>
-          <input type="textarea" placeholder="Comment"></input>
+        <form
+          name="portfolio-contact"
+          method="POST"
+          data-netlify="true"
+          onSubmit="submit"
+        >
+          <input type="text" placeholder="Name" name="name" required></input>
+          <input type="text" placeholder="Email" name="email" required></input>
+          <input type="textarea" placeholder="Comment" required></input>
           <button type="submit">submit</button>
         </form>
       </main>
-      {/* <Footer /> */}
     </div>
   );
 };
