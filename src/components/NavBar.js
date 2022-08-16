@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import NavModule from "./css/Navbar.module.css";
 import { NavLink } from "react-router-dom";
-import MobileModal from "./MobileModal";
 
 const NavBar = ({
   display,
@@ -11,19 +10,13 @@ const NavBar = ({
   minWidth,
   marginLeft,
 }) => {
-  const [openModal, setOpenModal] = useState(false);
   return (
     <div className={NavModule.container}>
-      {openModal ? <MobileModal closeModal={setOpenModal} /> : null}
       <div className={NavModule["mobile-menu-container"]}>
-        <img
-          className={NavModule["mobile-menu"]}
-          src="img/menu.svg"
-          onClick={() => setOpenModal(true)}
-        />
+        <img className={NavModule["mobile-menu"]} src="img/menu.svg" />
       </div>
       <nav style={{ width }}>
-        <div>
+        <div className={NavModule["logo-icon"]}>
           <img src="img/laptop-icon.svg" alt="logo icon" />
         </div>
         <ul className={NavModule["nav-list"]} style={{ justifyContent }}>
@@ -31,7 +24,9 @@ const NavBar = ({
             to="/"
             className={({ isActive }) => (isActive ? "active" : "inactive")}
           >
-            <li style={{ marginRight, marginLeft }}>Home</li>
+            <li className={NavModule.home} style={{ marginRight, marginLeft }}>
+              Home
+            </li>
           </NavLink>
 
           <li

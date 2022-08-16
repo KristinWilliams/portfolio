@@ -5,7 +5,6 @@ import ProjectsModule from "./css/Projects.module.css";
 import Footer from "./Footer";
 
 const Work = () => {
-  const allAboutIt = ["React", "Apis", "CSS", "Strapi"];
   return (
     <div className={ProjectsModule.container}>
       <NavBar
@@ -15,7 +14,7 @@ const Work = () => {
         marginRight="2rem"
         marginLeft="2rem"
         width="100%"
-        minWidth="5%"
+        minWidth="10%"
       />
       <main className={ProjectsModule.content}>
         <h1 className={ProjectsModule["work-header"]}>Work</h1>

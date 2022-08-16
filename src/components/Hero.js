@@ -4,13 +4,12 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import Skills from "./Skills";
 import Contact from "./Contact";
-import MobileModal from "./MobileModal";
 
 const Hero = () => {
   return (
     <div className={HeroModule.container} id="hero">
       <div>
-        <NavBar background="#D8DFFE" />
+        <NavBar />
       </div>
       <main className={HeroModule.content}>
         <div className={HeroModule["name-container"]}>
