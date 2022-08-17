@@ -64,7 +64,8 @@ form {
   align-items: center;
 }
 
-input {
+input,
+textarea {
   margin: 0.5rem auto;
   padding: 1rem;
   border-radius: 1rem;
@@ -73,7 +74,7 @@ input {
 }
 
 input,
-input[type="textarea"] {
+textarea {
   min-width: 50%;
 }
 
@@ -82,7 +83,7 @@ input[type="textarea"] {
   font-size: clamp(1rem, 2vw + 1rem, 1.4rem);
 }
 
-input[type="textarea"] {
+textarea {
   padding-bottom: 10rem;
 }
 
@@ -107,21 +108,21 @@ input[type="textarea"] {
 
 @media (min-width: 884px) {
   input,
-  input[type="textarea"] {
+  textarea {
     min-width: 40%;
   }
 }
 
 @media (min-width: 1188px) {
   input,
-  input[type="textarea"] {
+  textarea {
     min-width: 30%;
   }
 }
 
 @media (min-width: 1400px) {
   input,
-  input[type="textarea"] {
+  textarea {
     min-width: 20%;
   }
 }

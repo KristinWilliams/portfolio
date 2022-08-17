@@ -39,8 +39,8 @@ const Contact = () => {
         >
           <input type="hidden" name="form-name" value="portfolio-contact" />
           <input type="text" placeholder="Name" name="name" required />
-          <input type="text" placeholder="Email" name="email" required />
-          <input type="textarea" placeholder="Comment" required />
+          <input type="email" placeholder="Email" name="email" required />
+          <textarea placeholder="Comment" name="comment" required></textarea>
           <button type="submit">submit</button>
         </form>
       </main>
