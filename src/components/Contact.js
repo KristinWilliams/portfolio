@@ -37,9 +37,10 @@ const Contact = () => {
           data-netlify="true"
           onSubmit="submit"
         >
-          <input type="text" placeholder="Name" name="name" required></input>
-          <input type="text" placeholder="Email" name="email" required></input>
-          <input type="textarea" placeholder="Comment" required></input>
+          <input type="hidden" name="form-name" value="portfolio-contact" />
+          <input type="text" placeholder="Name" name="name" required />
+          <input type="text" placeholder="Email" name="email" required />
+          <input type="textarea" placeholder="Comment" required />
           <button type="submit">submit</button>
         </form>
       </main>
