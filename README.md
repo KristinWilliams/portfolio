@@ -1,6 +1,6 @@
 # Portfolio
 
-A personal website showcase all of my projects.
+A personal website to showcase all of my projects.
 
 ## Built With
 
