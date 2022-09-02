@@ -2,7 +2,7 @@ import React from "react";
 import ProjectsModule from "./css/Projects.module.css";
 import NavBar from "./NavBar";
 
-const Projects = ({ title, img, github, siteLink, languages }) => {
+const Projects = ({ title, img, github, siteLink, languages, extraInfo }) => {
   return (
     <>
       <div className={ProjectsModule.project}>
@@ -21,6 +21,7 @@ const Projects = ({ title, img, github, siteLink, languages }) => {
           </a>
         </div>
         <h1 className={ProjectsModule["project-title"]}>{title}</h1>
+        <span>{extraInfo}</span>
       </div>
       <ul className={ProjectsModule["skills-list"]}>
         {languages.map((language, i) => {

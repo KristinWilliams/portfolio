@@ -19,18 +19,26 @@ const Work = () => {
       <main className={ProjectsModule.content}>
         <h1 className={ProjectsModule["work-header"]}>Work</h1>
         <Projects
+          title="Recipe App"
+          extraInfo="(email: janed@yahoo.com pass: Qdkfjdkjf25!)"
+          img="img/recipe-app-screengrab.png"
+          github="https://github.com/KristinWilliams/Recipe-App"
+          siteLink="https://searchnutrition.netlify.app/"
+          languages={["React", "Typescript", "Scss", "Firebase"]}
+        />
+        <Projects
           title="All About it"
           img="img/all-about-it-screenshot.png"
           github="https://github.com/KristinWilliams/all-about-it-v2"
           siteLink="https://www.allaboutitpublishing.com/"
-          languages={["React", "Api", "CSS", "Strapi"]}
+          languages={["React", "Api", "CSS", "Strapi", "Javascript"]}
         />
         <Projects
           title="Ecommerce App"
           img="img/sneakers-ecommerce-screenshot.png"
           github="https://github.com/KristinWilliams/Sneakers-Ecommerce"
           siteLink="https://sneakers-ecommerce-app.netlify.app/"
-          languages={["React", "CSS"]}
+          languages={["React", "CSS", "Javascript"]}
         />
         <Projects
           title="Calculator App"
