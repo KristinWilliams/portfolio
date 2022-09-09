@@ -9,15 +9,11 @@ const Projects = ({ title, img, github, siteLink, languages, extraInfo }) => {
         <div className={ProjectsModule["img-container"]}>
           <div className={ProjectsModule.overlay}></div>
           <img src={img} className={ProjectsModule.screenshot} />
-          <a href={github}>
-            <div className={ProjectsModule["github-icon"]}>
-              <img src="img/github-icon.svg" />
-            </div>
+          <a href={github} className={ProjectsModule["github-link"]}>
+            Code
           </a>
-          <a href={siteLink}>
-            <div className={ProjectsModule["link-icon"]}>
-              <img src="img/link-icon.svg" />
-            </div>
+          <a href={siteLink} className={ProjectsModule["project-link"]}>
+            Live
           </a>
         </div>
         <h1 className={ProjectsModule["project-title"]}>{title}</h1>
